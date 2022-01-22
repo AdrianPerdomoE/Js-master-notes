@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendiendo jQuery</title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+    <script>$(document).ready(function () {
+        console.log("jQuery cargado");});</script>
+    <!--integrar jQuery en el documento-->
+    <!--el scrip js se pone despues de integrar jQuey-->
+    <script src="selectores.js"></script>
+    <style>
+        .margen{
+            margin-top: 45 px;
+            display: block;
+        }
+        .resaltado{
+            border-bottom: 2px solid brown;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="titulo">Titulo principal</h1>
+    <p id="p1">parrafo 1</p>
+    <p id="p2" class="parrafo2">parrafo 2</p>
+    <ul>
+        <li title="elm1">elemento 1</li>
+        <li title="elm2">elemento 2</li>
+        <li title="elm3">elemento 3</li>
+        <li >elemento 4</li>
+    </ul>
+<div id="caja">
+    <p>Hola soy la caja</p>
+    <ul>
+        <li>Elemento 1 de la caja</li>
+        <li class="resaltado">Elemento 2 de la caja</li>
+    </ul>
+    <span class="resaltado">soy un span</span>
+</div>
+</body>
+</html>
