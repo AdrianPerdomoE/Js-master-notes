@@ -32,6 +32,7 @@ $(function() {
         $("#caja").slideUp("fast");
     });
     $("#slidedown").click(function () { 
-        $("#caja").slideDown("fast");
+        $("#caja").slideDown("fast",function(){console.log("callback");});
     });                
+    //se puede ingresar como segundo parametro despues de la velocidad, una funcion para realizar un proceso al finalizar el efecto
 });
