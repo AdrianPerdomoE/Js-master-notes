@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Ui</title>
+    <script src="jquery-3.6.0.js"></script>
+    <link rel="stylesheet" href="jquery-ui-1.13.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="jquery-ui-1.13.1/jquery-ui.theme.min.css">
+    <link rel="stylesheet" href="jquery-ui-1.13.1/jquery-ui.structure.min.css">
+    <!-- estos links permiten importar los archivos de estilos de la libreria-->  
+    <script src="jquery-ui-1.13.1/jquery-ui.min.js"></script><!--uno de los archivos necesarios para usar jQuery Ui-->
+    <script src="interfaz_jquery_ui.js"></script>
+    <style>
+        .elemento{
+            width: 300px;
+            height: 200px;
+            border: 4px solid black;
+            background: lightblue;
+            margin: 20px;
+            float: left;
+        }
+        .lista li{
+            width: 80%;
+            padding: 20px;
+            border: 1px solid #ccc;
+            list-style: none;
+            cursor: pointer;
+        }
+        .ordenable li{
+            width: 80%;
+            padding: 20px;
+            border: 1px solid #ccc;
+            list-style: none;
+            cursor: pointer;
+            text-align: center;
+        }
+        ul .ui-selecting{ background: greenyellow;}
+        ul .ui-selected{background: aqua;}
+        #elemento_movido{
+            width: 100px;
+            height: 100px;
+            border: 4px solid red;
+        }
+        #area{
+            width: 300px;
+            height: 300px;
+            border: 4px solid green;
+        }
+        .caja_efectos{
+            width: 300px;
+            height: 200px;
+            border: 4px solid black;
+            background: pink;
+            margin: 20px;
+            display: none; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Interfaces con Jquery Ui</h1>
+    <h2>Widgets</h2>
+    <h3>Tooltips</h3>
+    <a href="https://youtube.com"  target="_blank" title="ir a youtube">Youtube</a>
+    <hr>
+    <h3>cuadro de dialogo</h3>
+    <button id="activar">Presioname</button>
+    <div id="popup" title="¿Estas seguro?">
+        <p>¿Quieres continuar?</p>
+    </div>
+    <hr>
+    <h3>Calendario</h3>
+    <input type="text" id="calendar">
+    <hr>
+    <h3>Pestañas</h3>
+    <div id="tabs">
+        <ul>
+            <li><a href="#tabs-1" >pestaña 1</a></li>
+            <li><a href="#tabs-2" >pestaña 2</a></li>
+            <li><a href="#tabs-3" >pestaña 3</a></li>
+        </ul>
+        <div id="tabs-1">Hola soy la primera pestaña</div>
+        <div id="tabs-2">Hola soy la segunda pestaña</div>
+        <div id="tabs-3">Hola soy la tercera pestaña</div>
+    </div>
+    <hr>
+    <h2>Efectos Jquery Ui</h2>
+    <button id="mostar">mostar</button>
+    <div class="caja_efectos"></div>
+   <h2>lista con selecionable</h2>
+    <ul class="lista">
+        <li>Gta 5</li>
+        <li>Skirim</li>
+        <li>Assasin's creed</li>
+        <li>Zelda</li>
+        <li>red dead redemption</li>
+    </ul>
+    <h2> lista ordenable</h2>
+    <ul class="ordenable" >
+        <li>Primero</li>
+        <li>segundo</li>
+        <li>cuarto</li>
+        <li>quinto</li>
+        <li>tercero</li>
+    </ul>
+    <h2> elemento encajable</h2>
+    <div id="elemento_movido"></div>
+    <div id="area"></div>
+
+    <h2> elementos movibles y tamaño ajustable</h2>
+    <div class="elemento"> hola soy un elemento de la web 1</div>
+    <div class="elemento"> hola soy un elemento de la web 2</div>
+    <div class="elemento"> hola soy un elemento de la web 3 </div>
+</body>
+</html>
