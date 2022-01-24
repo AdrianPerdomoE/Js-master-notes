@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/green.css" id="theme">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../jquery/jquery-ui-1.13.1/jquery-ui.theme.min.css">
+    <link rel="stylesheet" href="../jquery/jquery-ui-1.13.1/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="../jquery/jquery-ui-1.13.1/jquery-ui.min.css">
+    <script src="../jquery/jquery-ui-1.13.1/jquery-ui.min.js"></script> 
+    <!--Plugin validacion-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <div id="change_theme">
+        <div id="green"></div>
+        <div id="red"></div>
+        <div id="blue"></div>
+    </div>
+     <section id="global"> 
+        <header>
+            <div id="logo"><h1>Proyecto js</h1></div>
+            <div class="clearfix"></div>
+            <nav id="menu">    
+                <ul>
+                        <li><a href="index.html">INICIO</a></li>
+                        <li><a href="reloj.html">RELOJ</a></li>
+                        <li><a href="about.html">SOBRE MI</a></li>
+                        <li><a href="contact.html">CONTACTO</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section id="content">
+            <div id="box">
+                <h2>CONTACTO</h2>
+                <form id="form_contact" action="" method="post">
+                    <label for="name">Nombre</label>
+                    <input type="text" name="name" data-validation="alphanumeric">
+                    <label for="sur_name">Apellidos</label>
+                    <input type="text" name="sur_name" data-validation="alphanumeric">
+                    <label for="email" >Email</label>
+                    <input type="email" name="email" data-validation="email">
+                    <label for="sex">Sexo</label>
+                    <select name="sex" data-validation="required">
+                        <option value="men">Hombre</option>
+                        <option value="women">Mujer</option>
+                        <option value="another">otro</option>
+                    </select>
+                    <label for="birthday">Fecha de nacimiento</label>
+                    <input type="text" name="birthday" data-validation="date" data-validation-format="dd/mm/yyyy">
+                    <label for="age">edad</label>
+                    <input type="number" name="age" data-validation="number">
+                    <input type="submit" value="enviar">
+                </form>
+            </div>
+            <aside id="sidebar">
+                <div id="about">
+                    <h4><span>¿Quién soy?</span></h4>
+                    <img src="img/caracol.jpg">
+                    <p>tur adipiscing elit. Maecenas sollicitudin euismod ante. Quisque </p>
+                    <a href="#" id="cerrar_sesion">Cerrar sesion</a>
+                </div>
+                <div id="login">
+                    <h4><span>Identificate</span></h4>
+                    <form>
+                        <label for="name">nombre</label>
+                        <input type="text" name="name" id="name">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email">
+                        <label for="password">pasword</label>
+                        <input type="password" name="password" id="password">
+                        <input type="submit" value="entrar">
+                    </form>
+                </div>
+            </aside>
+            <div class="clearfix"></div>
+        </section>
+    </section>
+    <footer>
+        Pagina del Proyecto &copy;  
+        <a href="#" class="subir">Home</a>
+    </footer>
+</body>
+</html>
