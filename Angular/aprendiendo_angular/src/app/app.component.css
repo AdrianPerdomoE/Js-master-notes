@@ -1,0 +1,18 @@
+.links{
+    padding: 20px;
+    background:#252440;
+}
+.links a{
+    padding: 20px;
+    margin: 10px;
+    text-decoration: none;
+    color: white;
+    cursor: pointer; 
+}
+.links a:hover{
+    background-color: #504880;
+    transition: 300ms; 
+}
+.activado{
+    background:#504880;
+}

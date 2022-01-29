@@ -1,0 +1,17 @@
+<p>formulario works!</p>
+<h2>formulario</h2>
+<form #FormUsuario="ngForm" (ngSubmit)="onSubmit(FormUsuario)">
+    <label for="name">Nombre</label>
+    <input type="text" name="name" #nombre="ngModel"[(ngModel)]="usuario.nombre"  required>
+    <span *ngIf="nombre.touched&&!nombre.valid">El nombre es obligatorio</span>
+    <label for="sur_name">Apellidos</label>
+    <input type="text" name="sur_name" #apellidos="ngModel"[(ngModel)]="usuario.apellidos" required>
+    <span *ngIf="apellidos.touched&&!apellidos.valid">Los apellidos son obligatorios</span>
+    <label for="Email">Email</label>
+    <input type="email" name="Email" #email="ngModel"[(ngModel)]="usuario.email" required>
+    <span *ngIf="email.touched&&!email.valid">El correo electronico es obligatorio</span>
+    <label for="mssg">mensaje</label>
+    <textarea name="mssg" #mensaje="ngModel"[(ngModel)]="usuario.mensaje" required></textarea>
+    <span *ngIf="mensaje.touched&&!mensaje.valid">El mensaje es obligatorio</span>
+    <input type="submit" value="enviar" class="boton" [disabled]="!FormUsuario.form.valid">
+</form>

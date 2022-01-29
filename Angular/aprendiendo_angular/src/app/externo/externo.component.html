@@ -1,0 +1,23 @@
+<p>externo works!</p>
+{{'taMbien se puede escribir asi y con pipes' |uppercase}}
+{{4|calculadora:7}}
+<p>{{fecha  | date:"dd/MM/YYYY"}}</p>   
+<input type="text" [(ngModel)]="userId" (keyup.enter)="cargar_usuario()">
+<div *ngIf=" !user">Cargando...</div>
+<div *ngIf="user">
+    <img src="{{user.avatar}}">
+    <h2>Bienvenid@ {{user.first_name +" "+ user.last_name |uppercase }}</h2></div>
+<h2>Crear usuario</h2>
+<form #newuser="ngForm" (ngSubmit)="onSubmit(newuser)">
+     <label for="name" >Nombre</label>
+     <input type="text" name="name" #name="ngModel" [(ngModel)]="newUser.name"required>
+     <span *ngIf="name.touched&&!name.valid">Campo requerido</span> 
+     <label for="job">Trabajo</label>
+     <input type="text" name="job" #job="ngModel" [(ngModel)]="newUser.job" required>
+     <span *ngIf="job.touched&&!job.valid">Campo requerido</span>
+     <input type="submit" value="guardar" [disabled]="!newuser.form.valid" class="boton">
+</form>
+<div *ngIf="user_saved">
+    <h2>{{user_saved.name}}</h2>
+    <h4>{{user_saved.job}}</h4>
+</div>
