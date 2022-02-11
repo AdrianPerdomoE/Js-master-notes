@@ -1,5 +1,6 @@
 "use strict"
 var project = require("../models/project");
+var fs=require("fs");
 var controller={
     home:(req,res)=>{
         return res.status(200).send({mensaje:"soy la home"});
@@ -77,6 +78,36 @@ var controller={
             }
             return res.status(200).send({msg:"Proyecto eliminado correctamente",project:projectDeleted});
         })
+    },
+    upLoadImage:(req,res)=>{
+        var projectid=req.params.id;
+        var fileName="Imagen no subida...";
+        if(req.files){
+            var filePath= req.files.image.path;
+            var fileSplit= filePath.split("\\");
+            var fileName=fileSplit[1];
+            var extsplit=fileName.split("\.");
+            var fileExt=extsplit[1];
+            if(fileExt=="png" || fileExt=="jpg"||fileExt=="jpeg"||fileExt=="gif"){
+                project.findByIdAndUpdate(projectid,{img:fileName},{new:true},(err,projectUpdated)=>{
+                    if(err){
+                        return res.status(500).send({msg:"La imagen no se ha subido"});
+                    }
+                    if(!projectUpdated){
+                        return res.status(404).send({msg:" La imagen no existe"});
+                    }    
+                    return res.status(200).send({projectUpdated});
+                });
+            }
+            else{
+                fs.unlink(filePath,(err)=>{
+                    return res.status(200).send({msg:"Extension no es valida"})
+                });
+            }
+        }
+        else{
+            return res.status(500).send({msg:"No se han subido archivos"})
+        }
     }
 };
 module.exports=controller;

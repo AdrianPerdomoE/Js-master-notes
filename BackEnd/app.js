@@ -12,7 +12,14 @@ app.use(bodyParser.urlencoded({ extended: false }));
 //aca lo que se hizo fue convertir lo que llegue a un objeto json para su uso 
 app.use(bodyParser.json());//cualquier peticion la convirte en json
 //configuracion de CORS
-
+// Configurar cabeceras y cors
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Headers', 'Authorization, X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Request-Method');
+    res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
+    res.header('Allow', 'GET, POST, OPTIONS, PUT, DELETE');
+    next();
+});
 //Configuracion de rutas
 app.use("/api",projectRoutes);
 //usar el url /api/test
