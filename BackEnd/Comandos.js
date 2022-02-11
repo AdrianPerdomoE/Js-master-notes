@@ -6,3 +6,5 @@
 //npm install mongoose libreria para trabajar con mongoDB
 //npm install nodemon -dev permite que cuando se ejecute el servidor nodejs refresque con cada cambio que se hace(reiniciar el servidor)
 //el dev se usa porque solo durante produccion va a funcionar
+//recordar, mongod (demonio de mongo) debe estar abierto siempre que se trabaje en el servidor
+// npm start para iniciar la ejecucion, se debe hacer en la carpeta que tenga el json con la configuracion
