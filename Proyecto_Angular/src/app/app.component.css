@@ -1,0 +1,33 @@
+/*.cleaner{
+    clear: right;
+}
+.cajaLinks{
+    list-style-type: none;
+    background-color: antiquewhite;
+    margin: 0;
+    padding: 0;
+}
+.cajaLinks li{
+    display: inline-block;
+}
+.links{
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    cursor: pointer;
+    height: auto;
+    width: 25%;
+   text-align: center;
+    margin: 20px;
+    font-weight: bold;
+    
+}
+.links:hover{
+    background-color:aqua;
+    transition: 1000;
+}
+.activado{
+    background-color:aqua;
+    transition: 1000;
+}
+*/

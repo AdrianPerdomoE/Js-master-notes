@@ -1,0 +1,14 @@
+<header>
+  <ul class="cajaLinks">
+    <li *ngFor="let item of rutas; index as i">
+      <a [routerLink]=enrutar(item) [routerLinkActive]="['actived']" [ngClass]="{'logo':verificarMitadLogo(i)}" class="links">{{item}}</a>
+    </li>
+  </ul>
+</header>
+<section id="content">
+  <router-outlet></router-outlet> 
+
+</section>
+ <footer>
+  Master en Java Script &copy;
+ </footer>
