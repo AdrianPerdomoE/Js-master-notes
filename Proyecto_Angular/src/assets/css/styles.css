@@ -55,7 +55,7 @@ header ul li a{
     color: white;
 
 }
-header ul li a:hover ,.actived{
+header ul li a:hover,.actived{
     background: rgba(0, 0, 0, 0.8);
 }
 
@@ -68,7 +68,7 @@ header ul li a:hover ,.actived{
     font-family: "finger";
     font-size: 30px;
     transition: color 500ms;
-    transition: transform 500ms;
+    transition: transform 650ms;
     padding-left: 40px;
     margin-right: 30px;
 }
@@ -132,4 +132,65 @@ footer{
     padding-top: 20px;
     padding-bottom: 30px;
     text-align: justify;
+}
+/*Sección con formulario*/
+.container{
+    padding: 50px;
+    padding-top: 10px;
+
+
+}
+.container h2{
+    border-bottom: 1px solid #ccc;
+    padding-bottom:10px;
+    margin-bottom: 15px;
+    display: block;
+}
+form{
+    width: 80%;
+}
+form label{
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+form input[type="text"],
+form input[type="number"],
+input[type="email"], 
+form textarea{
+    width: 40%;
+    padding: 5px;
+
+}
+form button,
+form input[type="submit"]{
+    font-size: 17px;
+    padding: 10px;
+    border-radius: 5%;
+    margin-top: 15px;
+    color: white;
+    background: rgba(53, 103, 164, 1);
+    cursor: pointer;
+}
+form button:hover,
+form input[type="submit"]:hover{
+    background: rgba(53, 103, 164, 0.8);
+}
+.formError{
+    padding: 5px;
+    font-size: 16px;
+    background: red;
+    color: white;
+    margin-left: 5px;
+}
+form input[disabled]{
+    background: #ccc;
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+form input[disabled]:hover{
+    background: #ccc;
+    opacity: 0.4;
+    cursor: not-allowed;
 }
