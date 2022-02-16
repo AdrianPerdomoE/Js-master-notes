@@ -194,3 +194,19 @@ form input[disabled]:hover{
     opacity: 0.4;
     cursor: not-allowed;
 }
+.message{
+    padding: 5px;
+    border: 1px solid #eee;
+    width: 50%;
+}
+.success{
+    background: green;
+    color: white ;
+}
+.success a{
+    color: blue ;
+}
+.failed{
+    background: red;
+    color: white;
+}
