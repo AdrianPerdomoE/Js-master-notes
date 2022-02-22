@@ -1,6 +1,8 @@
 "use strict"
 var project = require("../models/project");
 var fs=require("fs");
+const { exists } = require("../models/project");
+var path=require("path");
 var controller={
     home:(req,res)=>{
         return res.status(200).send({mensaje:"soy la home"});
@@ -11,6 +13,7 @@ var controller={
     saveProject:(req,res)=>{
         let proj= new project();
         var params= req.body;
+        console.log(req.body);
         proj.name=params.name;
         proj.description=params.description;
         proj.category=params.category;
@@ -108,6 +111,20 @@ var controller={
         else{
             return res.status(500).send({msg:"No se han subido archivos"})
         }
+    },
+    getImageFile:(req,res)=>{
+        var file=req.params.image;
+        var path_file="./uploads/"+file;
+
+        fs.exists(path_file,(exists)=>{
+            console.log("paseo");
+            if(exists){
+                return res.sendFile(path.resolve(path_file));
+            }
+            else{
+                return res.status(200).send({msg:"No existe la imagen..."});
+            }
+        });
     }
 };
 module.exports=controller;
