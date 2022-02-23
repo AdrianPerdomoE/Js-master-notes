@@ -117,7 +117,6 @@ var controller={
         var path_file="./uploads/"+file;
 
         fs.exists(path_file,(exists)=>{
-            console.log("paseo");
             if(exists){
                 return res.sendFile(path.resolve(path_file));
             }
