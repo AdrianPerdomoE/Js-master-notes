@@ -2,7 +2,7 @@
     <h2>Proyectos</h2>
     <ul>
         <li *ngFor="let project of projects" class="project">
-            <a [routerLink]="['/    Proyecto',project._id]">
+            <a [routerLink]="['/Proyecto',project._id]">
                 <h3>{{project.name}} / {{project.year}}</h3>
                 <div class="image">
                     <img src="{{url+'getImage/'+project.img}}" *ngIf="project.img"> 

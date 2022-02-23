@@ -165,7 +165,10 @@ form textarea{
 
 }
 form button,
-form input[type="submit"]{
+form input[type="submit"],
+.bttn-edit,
+.bttn-delete
+{
     font-size: 17px;
     padding: 10px;
     border-radius: 5%;
@@ -233,4 +236,37 @@ form input[disabled]:hover{
 .project a{
     text-decoration: none;
     color: black;
+}
+/*pagina de proyecto*/
+.container .image{
+    float:left;
+    width: 49%;
+}
+
+.container .image img{
+    width: 100%;
+}
+.container .data{
+    float: right;
+    width: 49%;
+}
+.container h1{
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;  
+}
+.bttn-edit,
+.bttn-delete{
+    width: 40%;
+    float: left;
+    margin-right:10px;
+    text-decoration: none;
+}
+.bttn-edit{
+    background: orange;
+}
+.bttn-delete{
+    background: red;
 }
