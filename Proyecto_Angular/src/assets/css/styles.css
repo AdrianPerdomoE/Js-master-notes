@@ -276,3 +276,10 @@ form input[disabled]:hover{
 .bttn-delete{
     background: red;
 }
+/* Pagina de Edit */
+.container p img{
+    margin-bottom: 1rem;
+    display: flex;
+    width: 60%;
+    overflow: hidden;
+}

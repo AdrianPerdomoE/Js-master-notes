@@ -8,7 +8,8 @@
         <p>{{project.category}}</p>
         <p>{{project.langs}}</p>
         <p>
-            <a href="#" class="bttn-edit">Editar</a>
+            <!--Aca vemos como pasar parametros por la url especificada-->
+            <a [routerLink]="['/editarProyecto/',project._id]" class="bttn-edit">Editar</a>
             <a (click)="deleteProject(project._id)" class="bttn-delete">Borrar</a>
         </p>
     </div>
