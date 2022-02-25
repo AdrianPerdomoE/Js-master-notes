@@ -1,7 +1,14 @@
 <header>
   <ul class="cajaLinks">
     <li *ngFor="let item of rutas; index as i">
-      <a [routerLink]=enrutar(item) [routerLinkActive]="['actived']" [ngClass]="{'logo':verificarMitadLogo(i)}" class="links">{{item}}</a>
+      <ng-template #Logo>
+        <div class="logo">
+          <div>
+            {{item}}
+          </div>
+        </div> 
+      </ng-template>
+      <a *ngIf="!verificarMitadLogo(i);else Logo" [routerLink]=enrutar(item) [routerLinkActive]="['actived']"  class="links">{{item}}</a>
     </li>
   </ul>
 </header>
