@@ -34,5 +34,20 @@ export class DetailComponent implements OnInit {
       }
       );
   }
+  deleteProject(id:string){
+    this._projectService.deleteProject(id).subscribe(
+      {
+        next:(response)=>{
+          if(response.project){
+            this._router.navigate(['/proyectos'])
+          }
+        },
+        error:(err)=>{
+          console.log(<any>err);
+        },
+        complete:()=>{}
+      }
+    );
+  }
 
 }

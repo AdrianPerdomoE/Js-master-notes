@@ -7,6 +7,7 @@ import { CreateComponent } from './components/create/create.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ErrorComponent } from './components/error/error.component';
 import { DetailComponent } from './components/detail/detail.component';
+import { EditComponent } from './components/edit/edit.component';
 // agregar rutas a la constante
 const routes: Routes = [
   {path:"",component:AboutComponent},
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path:"crear-proyecto",component:CreateComponent},
   {path:"contacto",component:ContactComponent},
   {path:"Proyecto/:id",component:DetailComponent},
+  {path:"editarProyecto/:id",component:EditComponent},
   {path:"**",component:ErrorComponent}
 ];
 
