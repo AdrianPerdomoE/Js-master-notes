@@ -1,0 +1,39 @@
+.animar{
+    animation: boton 4s;
+}
+.bttn {
+    padding: 1rem;
+    background: dimgray;
+    display: inline-block;
+    border-radius: 0.3rem;
+    font-weight: bold;
+    color: cyan;
+    box-shadow: 0 0.2rem 0.4rem 0 rgb(0 0 0 / 20%);
+    cursor: pointer;
+    width: 10rem;
+    text-align: center;
+}
+.bttn::after{
+    content: "Apachurrame";
+}
+.bttn.animar::after {
+    content: "";
+}
+@keyframes boton {
+   0% { 
+       
+    }
+    100% {
+        padding: 1rem;
+        border-radius: 0.5rem;
+        color: transparent;
+        background: dimgray;
+        cursor: pointer;
+        width: 20rem;
+        display: inline-block;
+        padding: 0.5rem; 
+    }
+    
+  }
+  
+  
