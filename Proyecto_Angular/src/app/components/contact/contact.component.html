@@ -1,8 +1,19 @@
 <div (click)="animando=!animando" [class.animar]="animando" class="bttn">
 </div>
 <label for="width" style="display: block;" *ngIf="!anchuraToSlider"> Tamaño del slider</label>
-<input *ngIf="!anchuraToSlider" type="number" name="width" id="width" #width [(ngModel)]="widthSlider" (keyup.enter)="cargarSlider()">
-<div *ngIf="anchuraToSlider">
-    <app-slider [anchura]="widthSlider"></app-slider>
+<input *ngIf="!anchuraToSlider"
+    type="number" 
+    name="width" 
+    id="width" 
+    #width [(ngModel)]="widthSlider" 
+    (keyup.enter)="cargarSlider()">
+<div 
+    *ngIf="anchuraToSlider">
+    <app-slider (getAutor)="autor($event)" [anchura]="widthSlider"></app-slider>
 </div>
+<div *ngIf="creador" class="creador">
+    <h1>{{creador.nombre}}</h1>
+    <a>{{creador.correo}}</a>
+</div>
+
 
