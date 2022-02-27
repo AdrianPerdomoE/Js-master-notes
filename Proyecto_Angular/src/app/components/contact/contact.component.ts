@@ -8,10 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
   animando = false;
-  constructor() { }
+  public widthSlider:number;
+  public anchuraToSlider:number|undefined;
+  constructor() { 
+    this.widthSlider=0;
+  }
 
   ngOnInit(): void {
     
+  }
+  cargarSlider(){
+    this.anchuraToSlider=this.widthSlider;
   }
   
 

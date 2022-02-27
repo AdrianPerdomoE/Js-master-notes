@@ -1,3 +1,8 @@
 <div (click)="animando=!animando" [class.animar]="animando" class="bttn">
 </div>
-<app-slider></app-slider>
+<label for="width" style="display: block;" *ngIf="!anchuraToSlider"> Tamaño del slider</label>
+<input *ngIf="!anchuraToSlider" type="number" name="width" id="width" #width [(ngModel)]="widthSlider" (keyup.enter)="cargarSlider()">
+<div *ngIf="anchuraToSlider">
+    <app-slider [anchura]="widthSlider"></app-slider>
+</div>
+
