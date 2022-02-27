@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core'; 
-declare var $:any;
+
 
 @Component({
   selector: 'app-contact',
@@ -11,11 +11,7 @@ export class ContactComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-      $('.bxslider').bxSlider({
-        mode: 'fade',
-        captions: true,
-        slideWidth: 600
-      }); 
+    
   }
   
 
