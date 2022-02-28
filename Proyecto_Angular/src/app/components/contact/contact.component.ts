@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild} from '@angular/core'; 
+import { Component, ElementRef, OnInit, ViewChild} from '@angular/core'; 
 
 
 @Component({
@@ -7,7 +7,7 @@ import { Component, OnInit, ViewChild} from '@angular/core';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
-  @ViewChild("textos") texto:any;
+  @ViewChild("textos") texto:ElementRef|undefined;
   @ViewChild("contenedor") content:any;
   animando = false;
   public widthSlider:number;
@@ -20,7 +20,7 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {
     console.log(this.texto);
     console.log(this.content);
-    console.log(document.querySelector("#texto"))
+   //console.log(document.querySelector("#texto"))
   } 
   cargarSlider(){
     this.anchuraToSlider=this.widthSlider;
