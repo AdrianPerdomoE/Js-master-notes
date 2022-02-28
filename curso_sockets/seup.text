@@ -1,0 +1,10 @@
+para poner la base del proyecto se necesita:
+    elegir la carpeta y usar el comando npm init para crear el package.json
+    en la carpeta crear las carpetas donde iran servidor y cliente
+    descargar express con el comando npm install express --save
+    descargar socket.io con el comando npm install socket.io --save
+    descargar nodemon con el comando npm install nodemon --save-dev
+en el package.json:
+    en la propiedad "scripts":
+        añadir la propiedad :
+             "start": "nodemon rutaDondeEsta/index.js",
