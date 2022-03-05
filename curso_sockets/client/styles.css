@@ -1,0 +1,39 @@
+#messages{
+    width: 95%;
+    max-width: 30rem;
+    height: 25rem;
+    overflow: scroll;
+    border: 0.2rem solid rgb( 100 100 150 /80% );
+    box-shadow: 0rem 0rem 1.4rem rgb( 150 150 250 /50%);
+    background: #905164e1;
+} 
+.message{
+    margin: 1.4rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 0.1rem solid rgb(150 150 150 /60%);
+    background: white;
+}
+
+.msgForm{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+}
+.msgForm label{
+    float: left;
+    width: 10%;
+    margin: 0 0 0.3rem 0;
+}
+.msgForm input{
+    width: 10%;
+    margin: 0 0 0.3rem 0;
+}
+.msgForm textarea{
+    width: 40%;
+    margin:0 0 0.3rem 0;
+}
+
+input[type="button"]{
+    border-radius: 0.4rem;
+}

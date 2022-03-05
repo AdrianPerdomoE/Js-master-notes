@@ -1,3 +1,4 @@
+"strict"
 //socket.connect("http://192.168.20.175:6677", {"forceNew":true});      
 var socket = io(); // Inicializamos socketIO en el cliente  
 /*
@@ -7,11 +8,11 @@ var socket = io(); // Inicializamos socketIO en el cliente
  * Agregamos el mensaje ingresado por el usuario a la lista.
  */
 socket.on('nuevo mensaje', function (msj) {
-    console.log(msj)
     render(msj);
 });
 
 function render(datos){
+    
     var html = datos.map((mensaje, index)=>{   
         return(`
             <div class = "message">
@@ -20,7 +21,9 @@ function render(datos){
             </div>
         `);
     }).join(" ");
-    document.getElementById("messages").innerHTML = html;
+     let divMsg = document.getElementById("messages");
+    divMsg.innerHTML = html;
+    divMsg.scrollTop = divMsg.scrollHeight;
 }
  
 /*
@@ -28,7 +31,14 @@ function render(datos){
  * que se presiona el botón enviar y enviamos
  * su contenido como mensaje.
  */
-function enviarMensaje() {
-    socket.emit('nuevo mensaje', $('#nuevo-msj').val());
-    $('#nuevo-msj').val('');
-};
+ function addMensaje(){
+    var mensaje = {
+        nickname : document.getElementById("nickname").value,
+        text : document.getElementById("text").value
+    };
+    document.getElementById("nickname").style.display = "none";
+    document.getElementById("text").value = "";
+    document.getElementById("lblNick").style.display = "none";
+    socket.emit("add-message", mensaje);
+    
+}

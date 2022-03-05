@@ -21,13 +21,13 @@ var mensajes = [
 io.on("connection",(socket)=>{
     console.log(`El cliente co IP: ${socket.handshake.address} se ha conectado...`);
     io.emit('nuevo mensaje', mensajes);
-    socket.on('nuevo mensaje', function(msj) {
-        
+    socket.on('add-message', function(mensaje) { 
+        mensajes.push(mensaje);
         io.emit('nuevo mensaje', mensajes);
     });
     socket.on('disconnect', function() {
         console.log('Usuario desconectado');
-      });
+    });
 });
 //establecer el servidor de express  parametro 1: puerto parametro 2:fucion callback
 server.listen(6677,()=>{
